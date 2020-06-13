@@ -74,11 +74,11 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "kloklotto-admin:build"
+            "browserTarget": "klotto-admin:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "kloklotto-admin:build:production"
+              "browserTarget": "klotto-admin:build:production"
             },
             "ci": {
               "progress": false
@@ -88,7 +88,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "kloklotto-admin:build"
+            "browserTarget": "klotto-admin:build"
           }
         },
         "test": {
@@ -135,38 +135,38 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "kloklotto-admin:serve"
+            "devServerTarget": "klotto-admin:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "kloklotto-admin:serve:production"
+              "devServerTarget": "klotto-admin:serve:production"
             },
             "ci": {
-              "devServerTarget": "kloklotto-admin:serve:ci"
+              "devServerTarget": "klotto-admin:serve:ci"
             }
           }
         },
         "ionic-cordova-build": {
           "builder": "@ionic/angular-toolkit:cordova-build",
           "options": {
-            "browserTarget": "kloklotto-admin:build"
+            "browserTarget": "klotto-admin:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "kloklotto-admin:build:production"
+              "browserTarget": "klotto-admin:build:production"
             }
           }
         },
         "ionic-cordova-serve": {
           "builder": "@ionic/angular-toolkit:cordova-serve",
           "options": {
-            "cordovaBuildTarget": "kloklotto-admin:ionic-cordova-build",
-            "devServerTarget": "kloklotto-admin:serve"
+            "cordovaBuildTarget": "klotto-admin:ionic-cordova-build",
+            "devServerTarget": "klotto-admin:serve"
           },
           "configurations": {
             "production": {
-              "cordovaBuildTarget": "kloklotto-admin:ionic-cordova-build:production",
-              "devServerTarget": "kloklotto-admin:serve:production"
+              "cordovaBuildTarget": "klotto-admin:ionic-cordova-build:production",
+              "devServerTarget": "klotto-admin:serve:production"
             }
           }
         }
