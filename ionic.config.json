@@ -1,0 +1,27 @@
+{
+  "defaultProject": "klotto-mana",
+  "projects": {
+    "klotto-mana": {
+      "name": "klotto-mana",
+      "integrations": {},
+      "type": "angular",
+      "root": "apps/klotto-mana"
+    },
+    "klotto-pos": {
+      "name": "klotto-pos",
+      "integrations": {
+        "capacitor": {}
+      },
+      "type": "angular",
+      "root": "apps/klotto-pos"
+    },
+    "klotto-admin": {
+      "name": "klotto-admin",
+      "integrations": {
+        "capacitor": {}
+      },
+      "type": "angular",
+      "root": "apps/klotto-admin"
+    }
+  }
+}

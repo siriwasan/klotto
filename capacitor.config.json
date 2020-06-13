@@ -1,0 +1,13 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "klotto-admin",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}
