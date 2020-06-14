@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Welcome to Klotto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row class="ion-justify-content-between ion-align-items-center">
+      <ion-col>
+        <ion-img class="lotto-logo" src="assets/icon/powerball-logo.png"></ion-img>
+      </ion-col>
+      <ion-col class="ion-align-items-start">
+        <div>
+          <b>Draw date: 1/2/2020</b>
+          <p style="margin: 0;">10:34:23</p>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-item>
+        <ion-label>How many ticket?</ion-label>
+        <ion-select [(ngModel)]="ticketNumbers" okText="Okay" cancelText="Dismiss">
+          <ion-select-option *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" [value]="item">{{ item }}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-button class="footer-button" color="danger" expand="full" (click)="buyLotto()">Buy</ion-button>
+</ion-footer>

@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="lotto-buying"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ticket confirmation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row class="ion-justify-content-between ion-align-items-center">
+      <ion-col>
+        <ion-img class="lotto-logo" src="assets/icon/powerball-logo.png"></ion-img>
+      </ion-col>
+      <ion-col class="ion-align-items-start">
+        <div>
+          <b>Draw date: 1/2/2020</b>
+          <p style="margin: 0;">10:34:23</p>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let ticket of tickets" class="ion-align-items-center">
+      <!-- <ion-item class="ion-no-padding"> -->
+      <ion-col>
+        <ion-text class="ticket-id" color="secondary">
+          {{ ticket.id }}
+        </ion-text>
+      </ion-col>
+      <ion-col size="1.5" *ngFor="let num of ticket.nums; let i=index">
+        <ion-text [ngClass]="{'ticket-number': i !== 5, 'ticket-number-powerplay': i === 5}">
+          {{ num }}
+        </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-buttons>
+          <ion-button slot="icon-only" color="tertiary" (click)="editNumbers(ticket)">
+            <ion-icon name="create-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-col>
+      <!-- </ion-item> -->
+      <!-- <ion-item>
+        <ion-text class="ticket-id" color="secondary">
+          {{ ticket.id }}
+        </ion-text>
+        <div *ngFor="let num of ticket.nums; let i=index">
+          <div [ngClass]="{'ticket-number': i !== 5, 'ticket-number-powerplay': i === 5}">
+            <ion-text>
+              {{ num }}
+            </ion-text>
+          </div>
+
+        </div>
+        <ion-buttons>
+          <ion-button slot="icon-only" (click)="editNumbers(ticket)">
+            <ion-icon name="create-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item> -->
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-button class="footer-button" color="danger" expand="full" (click)="confirm()">Confirm</ion-button>
+</ion-footer>
