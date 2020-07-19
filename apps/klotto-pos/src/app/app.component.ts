@@ -7,9 +7,22 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss']
+  styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+  public appPages = [
+    {
+      title: 'Order',
+      url: '/tabs/order',
+      icon: 'reader',
+    },
+    {
+      title: 'Bought',
+      url: '/tabs/bought',
+      icon: 'cart',
+    },
+  ];
+
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,

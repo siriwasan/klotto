@@ -13,16 +13,20 @@ export class Tab1Page {
 
   constructor(private sanitizer: DomSanitizer) {}
 
-  async takePicture() {
-    const image = await Plugins.Camera.getPhoto({
+  takePicture() {
+    Plugins.Camera.getPhoto({
       quality: 100,
       allowEditing: false,
       resultType: CameraResultType.DataUrl,
       source: CameraSource.Camera,
-    });
-
-    this.photo = this.sanitizer.bypassSecurityTrustResourceUrl(
-      image && image.dataUrl
-    );
+    })
+      .then((image) => {
+        this.photo = this.sanitizer.bypassSecurityTrustResourceUrl(
+          image && image.dataUrl
+        );
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 }
