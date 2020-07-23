@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "klotto-mana"
+    "default": "klotto-mana",
+    "klotto-pos": "klotto-pos"
   }
 }

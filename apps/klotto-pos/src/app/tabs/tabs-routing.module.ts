@@ -15,12 +15,12 @@ const routes: Routes = [
       {
         path: 'order',
         loadChildren: () =>
-          import('./order/order.module').then((m) => m.OrderPageModule),
+          import('../order/order.module').then((m) => m.OrderPageModule),
       },
       {
         path: 'bought',
         loadChildren: () =>
-          import('./bought/bought.module').then((m) => m.BoughtPageModule),
+          import('../bought/bought.module').then((m) => m.BoughtPageModule),
       },
       {
         path: '',

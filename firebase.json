@@ -1,7 +1,11 @@
 {
   "hosting": {
-    "public": "apps/klotto-mana/www",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "public": "apps/klotto-pos/www",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
     "rewrites": [
       {
         "source": "**",

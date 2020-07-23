@@ -1,12 +1,9 @@
-// ion-tab-button.tab-selected {
-//   background: #ff600d;
-// }
-
-// ion-tab-bar {
-//   --background: blue;
-// }
-
 ion-tab-button {
-  --color: white;
-  --color-selected: yellow;
+  --background: lightgray;
+  max-width: 1000px;
+
+  &.tab-selected {
+    background: #397fff;
+    --color-selected: yellow;
+  }
 }

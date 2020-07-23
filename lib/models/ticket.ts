@@ -1,4 +1,4 @@
 export interface Ticket {
-  id: string;
-  num: number;
+  id: number;
+  nums: string[];
 }
